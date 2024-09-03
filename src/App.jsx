@@ -9,7 +9,7 @@ import Footer from "./components/Footer"
 const App = () => {
   return(
     <main className="bg-black font-inter">
-      <div className="bg-[#18181b] lg:mx-28 border-r border-l border-neutral-700">
+      <div className="bg-[#18181b] text-[#a6adac] lg:mx-28 border-r border-l border-neutral-700">
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
