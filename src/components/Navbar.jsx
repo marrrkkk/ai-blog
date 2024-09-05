@@ -1,4 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
+import logo from "../assets/logo.png";
 
 const Navbar = () => {
   const location = useLocation();
@@ -29,8 +30,18 @@ const Navbar = () => {
           >
             <li>
               <Link
+                to="/"
+                className={location.pathname === "/" ? "text-[#2dd4bf]" : ""}
+              >
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link
                 to="/about"
-                className={location.pathname === "/about" ? "text-[#2dd4bf]" : ""}
+                className={
+                  location.pathname === "/about" ? "text-[#2dd4bf]" : ""
+                }
               >
                 About
               </Link>
@@ -38,7 +49,9 @@ const Navbar = () => {
             <li>
               <Link
                 to="/history"
-                className={location.pathname === "/history" ? "text-[#2dd4bf]" : ""}
+                className={
+                  location.pathname === "/history" ? "text-[#2dd4bf]" : ""
+                }
               >
                 History
               </Link>
@@ -46,17 +59,29 @@ const Navbar = () => {
             <li>
               <Link
                 to="/people"
-                className={location.pathname === "/people" ? "text-[#2dd4bf]" : ""}
+                className={
+                  location.pathname === "/people" ? "text-[#2dd4bf]" : ""
+                }
               >
                 People
               </Link>
             </li>
           </ul>
         </div>
-        <Link to="/" className="btn btn-ghost text-xl text-[#2dd4bf]">AI</Link>
+        <Link to="/" className="btn btn-ghost text-xl text-[#2dd4bf]">
+          <img src={logo} className="size-12" />
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex bg-[#252529] rounded-full">
         <ul className="flex border border-neutral-700 space-x-10 px-8 py-2 rounded-full text-sm font-semibold">
+          <li>
+            <Link
+              to="/"
+              className={location.pathname === "/" ? "text-[#2dd4bf]" : ""}
+            >
+              Home
+            </Link>
+          </li>
           <li>
             <Link
               to="/about"
@@ -68,7 +93,9 @@ const Navbar = () => {
           <li>
             <Link
               to="/history"
-              className={location.pathname === "/history" ? "text-[#2dd4bf]" : ""}
+              className={
+                location.pathname === "/history" ? "text-[#2dd4bf]" : ""
+              }
             >
               History
             </Link>
@@ -76,7 +103,9 @@ const Navbar = () => {
           <li>
             <Link
               to="/people"
-              className={location.pathname === "/people" ? "text-[#2dd4bf]" : ""}
+              className={
+                location.pathname === "/people" ? "text-[#2dd4bf]" : ""
+              }
             >
               People
             </Link>
